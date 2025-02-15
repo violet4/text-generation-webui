@@ -49,3 +49,4 @@ wandb
 /docker-compose.yml
 /Dockerfile
 .env
+default_model.txt
