@@ -10,10 +10,20 @@ import site
 import subprocess
 import sys
 
+# find /usr -name "libamdhip64.so"
+# /usr/lib64/libamdhip64.so
+# https://github.com/ROCm/ROCm/issues/4208#issuecomment-2568091020
+# /opt/rocm/lib/libamdhip64.so
+#
+# for logging stuff:
+# AMD_LOG_LEVEL=5 AMD_SERIALIZE_KERNEL=3
+
+
 # Remove the '# ' from the following lines as needed for your AMD GPU on Linux
 # os.environ["ROCM_PATH"] = '/opt/rocm'
-# os.environ["HSA_OVERRIDE_GFX_VERSION"] = '10.3.0'
-# os.environ["HCC_AMDGPU_TARGET"] = 'gfx1030'
+#os.environ["ROCM_PATH"] = '/usr/lib64'
+os.environ["HSA_OVERRIDE_GFX_VERSION"] = '10.3.0'
+os.environ["HCC_AMDGPU_TARGET"] = 'gfx1031'
 
 
 # Define the required PyTorch version
